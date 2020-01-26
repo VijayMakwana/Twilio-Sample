@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.twiliosample.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_contactDetailsFragment"
+            app:destination="@id/contactDetailsFragment" />
+        <argument
+            android:name="messageSent"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactListFragment"
+        android:name="com.twiliosample.ui.contacts.ContactListFragment"
+        android:label="fragment_contact_list"
+        tools:layout="@layout/fragment_contact_list" />
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.twiliosample.ui.messages.MessagesFragment"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
+    <fragment
+        android:id="@+id/contactDetailsFragment"
+        android:name="com.twiliosample.ui.contacts.ContactDetailsFragment"
+        android:label="ContactDetailsFragment"
+        tools:layout="@layout/fragment_contact_details">
+        <argument
+            android:name="contact"
+            app:argType="com.twiliosample.model.Contact"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_contactDetailsFragment_to_sendMessageFragment"
+            app:destination="@id/sendMessageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendMessageFragment"
+        android:name="com.twiliosample.ui.contacts.sendmessage.SendMessageFragment"
+        android:label="SendMessageFragment"
+        tools:layout="@layout/fragment_send_message">
+        <argument
+            android:name="contactNumber"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_sendMessageFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/sendMessageFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

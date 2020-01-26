@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="message"
+            type="com.twiliosample.model.MessageListResponse.Message" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/textTime"
+            android:gravity="center_vertical"
+            android:text="@{message.to}"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            tools:text="Vijay Makwana" />
+
+        <TextView
+            android:id="@+id/textTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:text="@{message.dateSent}"
+            android:textSize="12sp"
+            tools:text="7600847698" />
+
+        <TextView
+            android:id="@+id/textMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTo"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:text="@{message.body}"
+            android:textSize="16sp"
+            tools:text="7600847698" />
+
+    </RelativeLayout>
+</layout>

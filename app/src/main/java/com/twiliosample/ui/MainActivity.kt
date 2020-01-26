@@ -1,7 +1,8 @@
-package com.twiliosample
+package com.twiliosample.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.twiliosample.R
 
 class MainActivity : AppCompatActivity() {
 
