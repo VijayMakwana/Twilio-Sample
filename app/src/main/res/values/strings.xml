@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">TwilioSample</string>
+    <string name="app_name">Twilio Sample</string>
+
+    <string name="title_contacts">Contacts</string>
+    <string name="title_messages">Messages</string>
+    <string name="btn_send_message">Send Message</string>
+    <string name="back_button_image">back button image</string>
+    <string name="btn_send">Send</string>
+    <string name="message_something_wrong">something went wrong, please try again letter</string>
+    <string name="message_sent_success">Message sent successfully</string>
+    <string name="message_offline">Internet connection appears to be offline.\n please check your connectivity and try again.</string>
 </resources>
